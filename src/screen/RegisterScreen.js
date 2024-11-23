@@ -15,24 +15,22 @@ function RegisterScreen({ navigation }) {
   const textColor = colorMode === 'light' ? '#3a5a9f' : '#ffffff';
   const placeholderColor = colorMode === 'light' ? '#6a8caf' : '#aaa';
 
+  // Manejo del registro
   const handleRegister = () => {
     if (password !== repeatPassword) {
       alert('Passwords do not match!');
       return;
     }
-    alert('Registration functionality not implemented yet');
-    // You can replace this with actual registration logic
+
+    // Redirigir a "QRVisit" después de un registro exitoso
+    navigation.navigate('QRVisit');
   };
 
   return (
     <View style={[styles.container, { backgroundColor }]}>
-      {/* Nombre de la app */}
       <Text style={[styles.appName, { color: textColor }]}>VECIAPP</Text>
-
-      {/* titulo */}
       <Text style={[styles.title]}>Create account</Text>
 
-      {/* Input Fields */}
       <TextInput
         style={[styles.input, { color: textColor, borderBottomColor: textColor }]}
         placeholder="E-mail"
@@ -78,12 +76,12 @@ function RegisterScreen({ navigation }) {
         onChangeText={setRepeatPassword}
       />
 
-      {/* Register Button */}
+      {/* Botón de "Register" */}
       <TouchableOpacity style={styles.button} onPress={handleRegister}>
         <Text style={[styles.buttonText]}>Register</Text>
       </TouchableOpacity>
 
-      {/* Link to Login Screen */}
+      {/* Enlace para redirigir al Login */}
       <Text
         style={[styles.linkText, { color: textColor }]}
         onPress={() => navigation.navigate('Login')}
@@ -104,17 +102,17 @@ const styles = StyleSheet.create({
   appName: {
     position: 'absolute',
     top: 20,
-    right: 20, 
+    right: 20,
     fontSize: 20,
     fontWeight: '600',
-    color: '#4a4a4a', 
+    color: '#4a4a4a',
   },
   title: {
     fontSize: 22,
     fontWeight: 'bold',
-    textAlign: 'center', // Centrado horizontalmente
+    textAlign: 'center',
     marginBottom: 40,
-    color: '#4a4a4a', // Gris oscuro
+    color: '#4a4a4a',
   },
   input: {
     height: 50,
