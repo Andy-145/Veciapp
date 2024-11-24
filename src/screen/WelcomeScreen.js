@@ -57,6 +57,11 @@ function WelcomeScreen({ navigation }) {
           <Text style={[styles.readQrText, { color: textColor }]}>Mantenimiento</Text>
         </TouchableOpacity>
       </View>
+      <TouchableOpacity
+          onPress={() => navigation.navigate('Reserve')}
+        >
+          <Text style={[styles.readQrText, { color: textColor }]}>ReserveScreen</Text>
+        </TouchableOpacity>
     </View>
   );
 }

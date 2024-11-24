@@ -9,6 +9,7 @@ import ReadqrScreen from './src/screen/ReadqrScreen';
 import MaintenanceScreen from './src/screen/MaintenanceScreen';
 import PayScreen from './src/screen/PayScreen';
 import QRVisitScreen from './src/screen/QRVisitScreen';
+import ReserveScreen from './src/screen/ReserveScreen';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ export default function App() {
         <Stack.Screen name="Maintenance" component={MaintenanceScreen} />
         <Stack.Screen name="Pay" component={PayScreen} />
         <Stack.Screen name="QRVisit" component={QRVisitScreen} />
+        <Stack.Screen name="Reserve" component={ReserveScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
