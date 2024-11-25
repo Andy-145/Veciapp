@@ -11,8 +11,15 @@ function LoginScreen({ navigation }) {
   const textColor = colorMode === 'light' ? '#3a5a9f' : '#ffffff';
   const placeholderColor = colorMode === 'light' ? '#6a8caf' : '#aaa';
 
+  // Manejo del inicio de sesión
   const handleLogin = () => {
-    alert('Log in functionality not implemented yet');
+    // Aquí podrías agregar lógica para verificar las credenciales del usuario.
+    if (username && password) {
+      // Redirigir a la pantalla QRVisit después de iniciar sesión
+      navigation.navigate('QRVisit');
+    } else {
+      alert('Por favor, introduce un usuario y contraseña válidos.');
+    }
   };
 
   const handleForgotPassword = () => {
@@ -107,4 +114,4 @@ const styles = StyleSheet.create({
 });
 
 export default LoginScreen;
-  
+

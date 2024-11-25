@@ -55,7 +55,7 @@ function QRVisitScreen({ navigation }) {
         Log out
       </Text>
 
-      <Text style={[styles.title, { color: textColor }]}>QR visit</Text>
+      <Text style={[styles.title, { color: textColor }]}>QR Visit</Text>
 
       <TextInput
         style={[styles.input, { color: textColor, borderBottomColor: textColor }]}
@@ -144,7 +144,6 @@ function QRVisitScreen({ navigation }) {
         <Text style={[styles.buttonText]}>Generate QR</Text>
       </TouchableOpacity>
 
-      {/* Iconos debajo del botón */}
       <View style={styles.iconContainer}>
         <TouchableOpacity>
           <Icon name="qr-code-outline" size={40} color={textColor} />
